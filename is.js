@@ -13,6 +13,7 @@ var is = (function() {
         };
     }
 
+    // attempts to get length / size of arbitrary container
     function len(val) {
         try {
             return is.Object(val) ? Object.keys(val).length : is.Map(val) || is.Set(val) ? val.size : val.length;
@@ -217,19 +218,31 @@ var is = (function() {
             Set: ta(function(o) {
                 return type(o, '[object Set]');
             }),
+            /**
+             * Determine if a variable is of an arguments type
+             * @param obj - variables to test
+             */
             Args: function Args(val) {
                 return !nil(val) && type(val, '[object Arguments]');
             },
             /**
              * Determine if a variable is a Symbol
-             * @param obj - variable to test
+             * @param obj - variables to test
              */
             Symbol: ta(function(obj) {
                 return type(obj, '[object Symbol]');
             }),
+            /**
+             * tests if a value is a single character
+             * @param {...string} values to test
+             */
             char: ta(function(val) {
                 return is.String(val) && val.length === 1;
             }),
+            /**
+             * tests if a value is a space character
+             * @param {...string} values to test
+             */
             space: function space(val) {
                 return is.char(val) && val.charCodeAt(0) > 8 && val.charCodeAt(0) < 14 || val.charCodeAt(0) === 32;
             },
@@ -420,6 +433,11 @@ var is = (function() {
             negative: function negative(val) {
                 return is.Num(val) && val < 0;
             },
+            /**
+             * tests that all parameters following the first are not the same as the first
+             * @param {*} value - inital value to compare all other params with
+             * @param {...*} arguments to compare with value
+             */
             neither: function neither(value) {
                 return toArr(arguments).slice(1).every(function(val) {
                     return value !== val;
@@ -482,6 +500,10 @@ var is = (function() {
                 return is.Func(val) ? RegExp('^' + String(Object.prototype.toString).replace(/[.*+?^${}()|[\]\/\\]/g, '\\$&').replace(/toString|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$').test(Function.prototype.toString.call(val)) : val && type == 'object' && /^\[object .+?Constructor\]$/.test(val.toString) || false;
             },
 
+            /**
+             * Tests where a dom element is an input of some sort
+             * @param {Element|Node} - element to test
+             */
             Input: function Input(element) {
                 return ['INPUT', 'TEXTAREA'].some(function(i) {
                     return element.tagName === i;
