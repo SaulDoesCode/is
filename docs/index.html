@@ -1,0 +1,2285 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro:400,500,700' rel='stylesheet' type='text/css'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='container'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed md-show fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block field'
+            type='text' />
+          <div id='toc'>
+              <a
+                href='#is'
+                class='block bold'>
+                is
+              </a>
+                <a
+                  href='#is.Alphanumeric'
+                  class='regular block'>
+                  .Alphanumeric
+                </a>
+                <a
+                  href='#is.Args'
+                  class='regular block'>
+                  .Args
+                </a>
+                <a
+                  href='#is.Arr'
+                  class='regular block'>
+                  .Arr
+                </a>
+                <a
+                  href='#is.Array'
+                  class='regular block'>
+                  .Array
+                </a>
+                <a
+                  href='#is.Arraylike'
+                  class='regular block'>
+                  .Arraylike
+                </a>
+                <a
+                  href='#is.Between'
+                  class='regular block'>
+                  .Between
+                </a>
+                <a
+                  href='#is.Blob'
+                  class='regular block'>
+                  .Blob
+                </a>
+                <a
+                  href='#is.Bool'
+                  class='regular block'>
+                  .Bool
+                </a>
+                <a
+                  href='#is.bt'
+                  class='regular block'>
+                  .bt
+                </a>
+                <a
+                  href='#is.bte'
+                  class='regular block'>
+                  .bte
+                </a>
+                <a
+                  href='#is.char'
+                  class='regular block'>
+                  .char
+                </a>
+                <a
+                  href='#is.Date'
+                  class='regular block'>
+                  .Date
+                </a>
+                <a
+                  href='#is.dateString'
+                  class='regular block'>
+                  .dateString
+                </a>
+                <a
+                  href='#is.Def'
+                  class='regular block'>
+                  .Def
+                </a>
+                <a
+                  href='#is.Element'
+                  class='regular block'>
+                  .Element
+                </a>
+                <a
+                  href='#is.Email'
+                  class='regular block'>
+                  .Email
+                </a>
+                <a
+                  href='#is.empty'
+                  class='regular block'>
+                  .empty
+                </a>
+                <a
+                  href='#is.eq'
+                  class='regular block'>
+                  .eq
+                </a>
+                <a
+                  href='#is.even'
+                  class='regular block'>
+                  .even
+                </a>
+                <a
+                  href='#is.False'
+                  class='regular block'>
+                  .False
+                </a>
+                <a
+                  href='#is.File'
+                  class='regular block'>
+                  .File
+                </a>
+                <a
+                  href='#is.FormData'
+                  class='regular block'>
+                  .FormData
+                </a>
+                <a
+                  href='#is.Func'
+                  class='regular block'>
+                  .Func
+                </a>
+                <a
+                  href='#is.future'
+                  class='regular block'>
+                  .future
+                </a>
+                <a
+                  href='#is.hexadecimal'
+                  class='regular block'>
+                  .hexadecimal
+                </a>
+                <a
+                  href='#is.HexColor'
+                  class='regular block'>
+                  .HexColor
+                </a>
+                <a
+                  href='#is.Input'
+                  class='regular block'>
+                  .Input
+                </a>
+                <a
+                  href='#is.int'
+                  class='regular block'>
+                  .int
+                </a>
+                <a
+                  href='#is.ip'
+                  class='regular block'>
+                  .ip
+                </a>
+                <a
+                  href='#is.ipv4'
+                  class='regular block'>
+                  .ipv4
+                </a>
+                <a
+                  href='#is.ipv6'
+                  class='regular block'>
+                  .ipv6
+                </a>
+                <a
+                  href='#is.Json'
+                  class='regular block'>
+                  .Json
+                </a>
+                <a
+                  href='#is.Lowercase'
+                  class='regular block'>
+                  .Lowercase
+                </a>
+                <a
+                  href='#is.lt'
+                  class='regular block'>
+                  .lt
+                </a>
+                <a
+                  href='#is.lte'
+                  class='regular block'>
+                  .lte
+                </a>
+                <a
+                  href='#is.Map'
+                  class='regular block'>
+                  .Map
+                </a>
+                <a
+                  href='#is.Native'
+                  class='regular block'>
+                  .Native
+                </a>
+                <a
+                  href='#is.negative'
+                  class='regular block'>
+                  .negative
+                </a>
+                <a
+                  href='#is.neither'
+                  class='regular block'>
+                  .neither
+                </a>
+                <a
+                  href='#is.Node'
+                  class='regular block'>
+                  .Node
+                </a>
+                <a
+                  href='#is.NodeList'
+                  class='regular block'>
+                  .NodeList
+                </a>
+                <a
+                  href='#is.Null'
+                  class='regular block'>
+                  .Null
+                </a>
+                <a
+                  href='#is.Num'
+                  class='regular block'>
+                  .Num
+                </a>
+                <a
+                  href='#is.Object'
+                  class='regular block'>
+                  .Object
+                </a>
+                <a
+                  href='#is.odd'
+                  class='regular block'>
+                  .odd
+                </a>
+                <a
+                  href='#is.past'
+                  class='regular block'>
+                  .past
+                </a>
+                <a
+                  href='#is.positive'
+                  class='regular block'>
+                  .positive
+                </a>
+                <a
+                  href='#is.RegExp'
+                  class='regular block'>
+                  .RegExp
+                </a>
+                <a
+                  href='#is.Set'
+                  class='regular block'>
+                  .Set
+                </a>
+                <a
+                  href='#is.space'
+                  class='regular block'>
+                  .space
+                </a>
+                <a
+                  href='#is.String'
+                  class='regular block'>
+                  .String
+                </a>
+                <a
+                  href='#is.Symbol'
+                  class='regular block'>
+                  .Symbol
+                </a>
+                <a
+                  href='#is.Tag'
+                  class='regular block'>
+                  .Tag
+                </a>
+                <a
+                  href='#is.time'
+                  class='regular block'>
+                  .time
+                </a>
+                <a
+                  href='#is.today'
+                  class='regular block'>
+                  .today
+                </a>
+                <a
+                  href='#is.tomorrow'
+                  class='regular block'>
+                  .tomorrow
+                </a>
+                <a
+                  href='#is.True'
+                  class='regular block'>
+                  .True
+                </a>
+                <a
+                  href='#is.Undef'
+                  class='regular block'>
+                  .Undef
+                </a>
+                <a
+                  href='#is.Uppercase'
+                  class='regular block'>
+                  .Uppercase
+                </a>
+                <a
+                  href='#is.URL'
+                  class='regular block'>
+                  .URL
+                </a>
+                <a
+                  href='#is.yesterday'
+                  class='regular block'>
+                  .yesterday
+                </a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        <div class='px2'>
+<div class='py1'><section class='py2 clearfix'>
+  <h2 id='is' class='mt0'>
+    is<span class='gray'></span>
+  </h2>
+  <p>is - Type Testing / Assertion</p>
+
+      <h4>Static members</h4>
+        <div class='collapsible' id='is.Alphanumeric'>
+          <a href='#is.Alphanumeric'>
+            <code>
+              .Alphanumeric<span class='gray'>(str)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a String contains only characters and numbers (alphanumeric)</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Alphanumeric' class='mt0'>
+                Alphanumeric<span class='gray'>(str)</span>
+              </h2>
+              <p>Determine if a String contains only characters and numbers (alphanumeric)</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>str</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Args'>
+          <a href='#is.Args'>
+            <code>
+              .Args<span class='gray'>(obj, val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is of an arguments type</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Args' class='mt0'>
+                Args<span class='gray'>(obj, val)</span>
+              </h2>
+              <p>Determine if a variable is of an arguments type</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variables to test</p>
+            
+                      </div>
+                    </li>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Arr'>
+          <a href='#is.Arr'>
+            <code>
+              .Arr<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Test if something is an Array</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Arr' class='mt0'>
+                Arr<span class='gray'>(args)</span>
+              </h2>
+              <p>Test if something is an Array</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Array'>
+          <a href='#is.Array'>
+            <code>
+              .Array<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Array.isArray alias for convenience and performance when only one argument is present</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Array' class='mt0'>
+                Array<span class='gray'>(val)</span>
+              </h2>
+              <p>Array.isArray alias for convenience and performance when only one argument is present</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li>Any <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Arraylike'>
+          <a href='#is.Arraylike'>
+            <code>
+              .Arraylike<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Test if something is an Array-Like</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Arraylike' class='mt0'>
+                Arraylike<span class='gray'>(args)</span>
+              </h2>
+              <p>Test if something is an Array-Like</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Between'>
+          <a href='#is.Between'>
+            <code>
+              .Between<span class='gray'>(val, max, min)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a Number is between a maximum and a minimum</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Between' class='mt0'>
+                Between<span class='gray'>(val, max, min)</span>
+              </h2>
+              <p>Determines whether a Number is between a maximum and a minimum</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>number value to test</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>max</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>maximum to compare the value with</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>min</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>minimum to compare the value with</p>
+            
+                      </div>
+                    </li>
+                </ul>
+                  <h4>Returns</h4>
+                  <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code></code>
+                  :
+                  <div class='force-inline'>
+                    <p>wether or not the value is between the max and min</p>
+            
+                  </div>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Blob'>
+          <a href='#is.Blob'>
+            <code>
+              .Blob<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is of Blob type</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Blob' class='mt0'>
+                Blob<span class='gray'>(obj)</span>
+              </h2>
+              <p>Determine if a variable is of Blob type</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Bool'>
+          <a href='#is.Bool'>
+            <code>
+              .Bool<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Test if something is a boolean type</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Bool' class='mt0'>
+                Bool<span class='gray'>(val)</span>
+              </h2>
+              <p>Test if something is a boolean type</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.bt'>
+          <a href='#is.bt'>
+            <code>
+              .bt<span class='gray'>(val, other)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines if a number is BIGGER than another</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.bt' class='mt0'>
+                bt<span class='gray'>(val, other)</span>
+              </h2>
+              <p>Determines if a number is BIGGER than another</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value to test</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>other</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>num to test with value</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.bte'>
+          <a href='#is.bte'>
+            <code>
+              .bte<span class='gray'>(val, other)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines if a number is BIGGER than or equal to another</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.bte' class='mt0'>
+                bte<span class='gray'>(val, other)</span>
+              </h2>
+              <p>Determines if a number is BIGGER than or equal to another</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value to test</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>other</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>num to test with value</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.char'>
+          <a href='#is.char'>
+            <code>
+              .char<span class='gray'>(values)</span>
+            </code>
+            <div class='force-inline'>
+              <p>tests if a value is a single character</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.char' class='mt0'>
+                char<span class='gray'>(values)</span>
+              </h2>
+              <p>tests if a value is a single character</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li>...<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>values</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Date'>
+          <a href='#is.Date'>
+            <code>
+              .Date<span class='gray'>(variable)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a Date type</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Date' class='mt0'>
+                Date<span class='gray'>(variable)</span>
+              </h2>
+              <p>Determine if a variable is a Date type</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li>...Any <strong>variable</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.dateString'>
+          <a href='#is.dateString'>
+            <code>
+              .dateString<span class='gray'>(dateString)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is a dateString</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.dateString' class='mt0'>
+                dateString<span class='gray'>(dateString)</span>
+              </h2>
+              <p>Determines whether a String is a dateString</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>dateString</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Def'>
+          <a href='#is.Def'>
+            <code>
+              .Def<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine whether a variable is in fact defined</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Def' class='mt0'>
+                Def<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine whether a variable is in fact defined</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Element'>
+          <a href='#is.Element'>
+            <code>
+              .Element<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a HTMLElement</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Element' class='mt0'>
+                Element<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable is a HTMLElement</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Email'>
+          <a href='#is.Email'>
+            <code>
+              .Email<span class='gray'>(email)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is a valid Email</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Email' class='mt0'>
+                Email<span class='gray'>(email)</span>
+              </h2>
+              <p>Determines whether a String is a valid Email</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>email</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.empty'>
+          <a href='#is.empty'>
+            <code>
+              .empty<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a given collection or string is empty</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.empty' class='mt0'>
+                empty<span class='gray'>(val)</span>
+              </h2>
+              <p>Determine if a given collection or string is empty</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> or <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> or <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value to test if empty</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.eq'>
+          <a href='#is.eq'>
+            <code>
+              .eq<span class='gray'>(a, b)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines if two variables are equal</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.eq' class='mt0'>
+                eq<span class='gray'>(a, b)</span>
+              </h2>
+              <p>Determines if two variables are equal</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>a</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>first value to compare</p>
+            
+                      </div>
+                    </li>
+                    <li> <strong>b</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>second value to compare</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.even'>
+          <a href='#is.even'>
+            <code>
+              .even<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>checks if a number is an even number</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.even' class='mt0'>
+                even<span class='gray'>(val)</span>
+              </h2>
+              <p>checks if a number is an even number</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable / value to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.False'>
+          <a href='#is.False'>
+            <code>
+              .False<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable/s are false</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.False' class='mt0'>
+                False<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable/s are false</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.File'>
+          <a href='#is.File'>
+            <code>
+              .File<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a File Object</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.File' class='mt0'>
+                File<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable is a File Object</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.FormData'>
+          <a href='#is.FormData'>
+            <code>
+              .FormData<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is of a FormData type</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.FormData' class='mt0'>
+                FormData<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable is of a FormData type</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Func'>
+          <a href='#is.Func'>
+            <code>
+              .Func<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a function</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Func' class='mt0'>
+                Func<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable is a function</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.future'>
+          <a href='#is.future'>
+            <code>
+              .future<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines if a date is in the future</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.future' class='mt0'>
+                future<span class='gray'>(obj)</span>
+              </h2>
+              <p>Determines if a date is in the future</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>Date to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.hexadecimal'>
+          <a href='#is.hexadecimal'>
+            <code>
+              .hexadecimal<span class='gray'>(hexadecimal)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is hexadecimal</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.hexadecimal' class='mt0'>
+                hexadecimal<span class='gray'>(hexadecimal)</span>
+              </h2>
+              <p>Determines whether a String is hexadecimal</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>hexadecimal</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.HexColor'>
+          <a href='#is.HexColor'>
+            <code>
+              .HexColor<span class='gray'>(HexColor, hexColor)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is a HEX-COLOR (#fff123)</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.HexColor' class='mt0'>
+                HexColor<span class='gray'>(HexColor, hexColor)</span>
+              </h2>
+              <p>Determines whether a String is a HEX-COLOR (#fff123)</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>HexColor</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                    <li> <strong>hexColor</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Input'>
+          <a href='#is.Input'>
+            <code>
+              .Input<span class='gray'>(element)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Tests where a dom element is an input of some sort</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Input' class='mt0'>
+                Input<span class='gray'>(element)</span>
+              </h2>
+              <p>Tests where a dom element is an input of some sort</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>element</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.int'>
+          <a href='#is.int'>
+            <code>
+              .int<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>checks if a number is an integer</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.int' class='mt0'>
+                int<span class='gray'>(val)</span>
+              </h2>
+              <p>checks if a number is an integer</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable / value to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.ip'>
+          <a href='#is.ip'>
+            <code>
+              .ip<span class='gray'>(ip)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is a ip</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.ip' class='mt0'>
+                ip<span class='gray'>(ip)</span>
+              </h2>
+              <p>Determines whether a String is a ip</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>ip</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.ipv4'>
+          <a href='#is.ipv4'>
+            <code>
+              .ipv4<span class='gray'>(ipv4)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is a ipv4</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.ipv4' class='mt0'>
+                ipv4<span class='gray'>(ipv4)</span>
+              </h2>
+              <p>Determines whether a String is a ipv4</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>ipv4</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.ipv6'>
+          <a href='#is.ipv6'>
+            <code>
+              .ipv6<span class='gray'>(ipv6)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is a ipv6</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.ipv6' class='mt0'>
+                ipv6<span class='gray'>(ipv6)</span>
+              </h2>
+              <p>Determines whether a String is a ipv6</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>ipv6</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Json'>
+          <a href='#is.Json'>
+            <code>
+              .Json<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a sring is JSON</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Json' class='mt0'>
+                Json<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a sring is JSON</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Lowercase'>
+          <a href='#is.Lowercase'>
+            <code>
+              .Lowercase<span class='gray'>(char, str)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a String is LOWERCASE</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Lowercase' class='mt0'>
+                Lowercase<span class='gray'>(char, str)</span>
+              </h2>
+              <p>Determine if a String is LOWERCASE</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>char</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                    <li> <strong>str</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.lt'>
+          <a href='#is.lt'>
+            <code>
+              .lt<span class='gray'>(val, other)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines if a number is LOWER than another</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.lt' class='mt0'>
+                lt<span class='gray'>(val, other)</span>
+              </h2>
+              <p>Determines if a number is LOWER than another</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value to test</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>other</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>num to test with value</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.lte'>
+          <a href='#is.lte'>
+            <code>
+              .lte<span class='gray'>(val, other)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines if a number is LOWER than or equal to another</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.lte' class='mt0'>
+                lte<span class='gray'>(val, other)</span>
+              </h2>
+              <p>Determines if a number is LOWER than or equal to another</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value to test</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>other</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>num to test with value</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Map'>
+          <a href='#is.Map'>
+            <code>
+              .Map<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a Map</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Map' class='mt0'>
+                Map<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable is a Map</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Native'>
+          <a href='#is.Native'>
+            <code>
+              .Native<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Test if something is a Native JavaScript feature</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Native' class='mt0'>
+                Native<span class='gray'>(val)</span>
+              </h2>
+              <p>Test if something is a Native JavaScript feature</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.negative'>
+          <a href='#is.negative'>
+            <code>
+              .negative<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>checks if a number is positive</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.negative' class='mt0'>
+                negative<span class='gray'>(val)</span>
+              </h2>
+              <p>checks if a number is positive</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable / value to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.neither'>
+          <a href='#is.neither'>
+            <code>
+              .neither<span class='gray'>(value, arguments)</span>
+            </code>
+            <div class='force-inline'>
+              <p>tests that all parameters following the first are not the same as the first</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.neither' class='mt0'>
+                neither<span class='gray'>(value, arguments)</span>
+              </h2>
+              <p>tests that all parameters following the first are not the same as the first</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li>Any <strong>value</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>inital value to compare all other params with</p>
+            
+                      </div>
+                    </li>
+                    <li>...Any <strong>arguments</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>to compare with value</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Node'>
+          <a href='#is.Node'>
+            <code>
+              .Node<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine whether a variable is a DOM Node</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Node' class='mt0'>
+                Node<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine whether a variable is a DOM Node</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.NodeList'>
+          <a href='#is.NodeList'>
+            <code>
+              .NodeList<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine whether a variable is a DOM NodeList or Collection of Nodes</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.NodeList' class='mt0'>
+                NodeList<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine whether a variable is a DOM NodeList or Collection of Nodes</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Null'>
+          <a href='#is.Null'>
+            <code>
+              .Null<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine whether a variable is null</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Null' class='mt0'>
+                Null<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine whether a variable is null</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Num'>
+          <a href='#is.Num'>
+            <code>
+              .Num<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a Number</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Num' class='mt0'>
+                Num<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable is a Number</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li>...Any <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Object'>
+          <a href='#is.Object'>
+            <code>
+              .Object<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is an Object</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Object' class='mt0'>
+                Object<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable is an Object</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.odd'>
+          <a href='#is.odd'>
+            <code>
+              .odd<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>checks if a number is an odd number</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.odd' class='mt0'>
+                odd<span class='gray'>(val)</span>
+              </h2>
+              <p>checks if a number is an odd number</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable / value to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.past'>
+          <a href='#is.past'>
+            <code>
+              .past<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines if a date is in the past</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.past' class='mt0'>
+                past<span class='gray'>(obj)</span>
+              </h2>
+              <p>Determines if a date is in the past</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>Date to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.positive'>
+          <a href='#is.positive'>
+            <code>
+              .positive<span class='gray'>(val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>checks if a number is positive</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.positive' class='mt0'>
+                positive<span class='gray'>(val)</span>
+              </h2>
+              <p>checks if a number is positive</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable / value to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.RegExp'>
+          <a href='#is.RegExp'>
+            <code>
+              .RegExp<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a Regular Expression</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.RegExp' class='mt0'>
+                RegExp<span class='gray'>(obj)</span>
+              </h2>
+              <p>Determine if a variable is a Regular Expression</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Set'>
+          <a href='#is.Set'>
+            <code>
+              .Set<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a Set</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Set' class='mt0'>
+                Set<span class='gray'>(obj)</span>
+              </h2>
+              <p>Determine if a variable is a Set</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.space'>
+          <a href='#is.space'>
+            <code>
+              .space<span class='gray'>(values, val)</span>
+            </code>
+            <div class='force-inline'>
+              <p>tests if a value is a space character</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.space' class='mt0'>
+                space<span class='gray'>(values, val)</span>
+              </h2>
+              <p>tests if a value is a space character</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li>...<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>values</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>to test</p>
+            
+                      </div>
+                    </li>
+                    <li> <strong>val</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.String'>
+          <a href='#is.String'>
+            <code>
+              .String<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Test if something is a String</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.String' class='mt0'>
+                String<span class='gray'>(args)</span>
+              </h2>
+              <p>Test if something is a String</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Symbol'>
+          <a href='#is.Symbol'>
+            <code>
+              .Symbol<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable is a Symbol</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Symbol' class='mt0'>
+                Symbol<span class='gray'>(obj)</span>
+              </h2>
+              <p>Determine if a variable is a Symbol</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variables to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Tag'>
+          <a href='#is.Tag'>
+            <code>
+              .Tag<span class='gray'>(element, tag)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Test an element&apos;s tagname</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Tag' class='mt0'>
+                Tag<span class='gray'>(element, tag)</span>
+              </h2>
+              <p>Test an element&apos;s tagname</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling">Node</a></code> <strong>element</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>node to test</p>
+            
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>tag</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>tag to test node for</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.time'>
+          <a href='#is.time'>
+            <code>
+              .time<span class='gray'>(time)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is a timeString</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.time' class='mt0'>
+                time<span class='gray'>(time)</span>
+              </h2>
+              <p>Determines whether a String is a timeString</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>time</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.today'>
+          <a href='#is.today'>
+            <code>
+              .today<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>checks wether a date is today</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.today' class='mt0'>
+                today<span class='gray'>(obj)</span>
+              </h2>
+              <p>checks wether a date is today</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>Date to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.tomorrow'>
+          <a href='#is.tomorrow'>
+            <code>
+              .tomorrow<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>checks wether a date is tommorow</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.tomorrow' class='mt0'>
+                tomorrow<span class='gray'>(obj)</span>
+              </h2>
+              <p>checks wether a date is tommorow</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>Date to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.True'>
+          <a href='#is.True'>
+            <code>
+              .True<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a variable/s are true</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.True' class='mt0'>
+                True<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine if a variable/s are true</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Undef'>
+          <a href='#is.Undef'>
+            <code>
+              .Undef<span class='gray'>(args)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine whether a variable is undefined</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Undef' class='mt0'>
+                Undef<span class='gray'>(args)</span>
+              </h2>
+              <p>Determine whether a variable is undefined</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>args</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>value/values to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.Uppercase'>
+          <a href='#is.Uppercase'>
+            <code>
+              .Uppercase<span class='gray'>(char, str)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determine if a String is UPPERCASE</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.Uppercase' class='mt0'>
+                Uppercase<span class='gray'>(char, str)</span>
+              </h2>
+              <p>Determine if a String is UPPERCASE</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>char</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                    <li> <strong>str</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.URL'>
+          <a href='#is.URL'>
+            <code>
+              .URL<span class='gray'>(url)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Determines whether a String is a URL</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.URL' class='mt0'>
+                URL<span class='gray'>(url)</span>
+              </h2>
+              <p>Determines whether a String is a URL</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>url</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>variable to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='is.yesterday'>
+          <a href='#is.yesterday'>
+            <code>
+              .yesterday<span class='gray'>(obj)</span>
+            </code>
+            <div class='force-inline'>
+              <p>checks wether a date is yesterday</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+            <section class='py2 clearfix'>
+              <h2 id='is.yesterday' class='mt0'>
+                yesterday<span class='gray'>(obj)</span>
+              </h2>
+              <p>checks wether a date is yesterday</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li> <strong>obj</strong>
+                      :
+                      <div class='force-inline'>
+                        <p>Date to test</p>
+            
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+</section>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
