@@ -2,7 +2,7 @@
  * is.js a small es6 type testing toolkit
  * for the web and node
  * @author github.com/@SaulDoesCode
- * @copyright MIT Licence (c) Saul van der Walt - 2016
+ * @copyright MIT Licence (c) 2016 Saul van der Walt
  */
 (function(root) {
   "use strict";
@@ -57,7 +57,7 @@
       hexadecimal: /^[0-9a-fA-F]+$/,
       hexColor: /^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/
     },
-    /** is - Type Testing / Assertion */ is = {
+    is = {
       /**
        * Test if something is a boolean type
        * @param val - value to test
@@ -479,8 +479,13 @@
         return ['INPUT', 'TEXTAREA'].some(function(i) {
           return element.tagName === i;
         });
-      }
+      },
+      curry: curry
     };
+  /**
+   * is - Type Testing / Assertion
+   * main object with all the methods
+   */
   if (typeof define === 'function' && define.amd) define(['is'], is); // Node. Does not work with strict CommonJS, but
   // only CommonJS-like environments that support module.exports,
   // like Node.

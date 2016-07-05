@@ -2,7 +2,7 @@
 * is.js a small es6 type testing toolkit
 * for the web and node
 * @author github.com/@SaulDoesCode
-* @copyright MIT Licence (c) Saul van der Walt - 2016
+* @copyright MIT Licence (c) 2016 Saul van der Walt
 */
 (function (root) {
     "use strict";
@@ -46,14 +46,17 @@
             dateString: /^(1[0-2]|0?[1-9])\/(3[01]|[12][0-9]|0?[1-9])\/(?:[0-9]{2})?[0-9]{2}$/,
             hexadecimal: /^[0-9a-fA-F]+$/,
             hexColor: /^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/,
-        },
+        };
 
-        /** is - Type Testing / Assertion */
-        is = {
-            /**
-             * Test if something is a boolean type
-             * @param val - value to test
-             */
+        /**
+         * is - Type Testing / Assertion
+         * main object with all the methods
+         */
+        const is = {
+          /**
+           * Test if something is a boolean type
+           * @param val - value to test
+           */
             Bool: ta(o => typeof o === 'boolean'),
             /**
              * Test if something is a String
@@ -374,6 +377,7 @@
                 return is.Func(val) ? RegExp('^' + String(Object.prototype.toString).replace(/[.*+?^${}()|[\]\/\\]/g, '\\$&').replace(/toString|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$').test(Function.prototype.toString.call(val)) : (val && type == 'object' && /^\[object .+?Constructor\]$/.test(val.toString)) || false;
             },
             Input: element => ['INPUT', 'TEXTAREA'].some(i => element.tagName === i),
+            curry,
         };
 
     if (typeof define === 'function' && define.amd) define(['is'], is);
