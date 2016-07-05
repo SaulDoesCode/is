@@ -1,5 +1,17 @@
 is.js small type testing library for node and the web
 
+```javascript
+  const is = require('is');
+
+  is.Arr([1,2,3,4]) // -> true
+
+  is.Object({ a : 1 , b : 2}) // -> true
+
+  is.eq('string one', 'string one') // ->  true
+
+  is.eq('string two')('string two') // -> true
+```
+
 #### API
 
 ##### is

@@ -6,11 +6,10 @@
 */
 (function (root) {
     "use strict";
-    const slice = Array.prototype.slice.call;
+    const slice = (ctx,i) => Array.prototype.slice.call(ctx,i || 0);
 
     function curry(fn, ctx) {
         const arity = fn.length;
-
         function curried() {
             const args = slice(arguments);
             return args.length < arity ? function () {
@@ -22,7 +21,7 @@
     }
     // tests arguments with Array.prototype.every;
     function ta(test) {
-        return (...args) => args.length == 1 ? test(args[0]) : curry((...args) => args.length && args.every(test));
+        return (...args) => args.length == 1 ? test : args.length && args.every(test);
     }
 
     // get the string form of any object
@@ -110,7 +109,7 @@
              * @param {Node} element - node to test
              * @param {string} tag - tag to test node for
              */
-            Tag: (element, tag) => is.Node(element) ? element.tagName === tag.toUpperCase() : false,
+            Tag: curry((element, tag) => is.Node(element) ? element.tagName === tag.toUpperCase() : false),
             /**
              * Determine whether a variable is a DOM NodeList or Collection of Nodes
              * @param args - value/values to test
@@ -298,7 +297,7 @@
              * @param {Number} min - minimum to compare the value with
              * @returns {Boolean} wether or not the value is between the max and min
              */
-            Between: (val, max, min) => (val <= max && val >= min),
+            Between: curry((val, max, min) => (val <= max && val >= min)),
             /**
              * checks if a number is an integer
              * @param val - variable / value to test
@@ -332,37 +331,37 @@
              * @param a - first value to compare
              * @param b - second value to compare
              */
-            eq: ta((a, b) => a === b),
+            eq: curry((a, b) => a === b),
             /**
              * Determines if two variables are equal
              * @param a - first value to compare
              * @param b - second value to compare
              */
-            not:ta((o,b) => o !== b),
+            not:curry((o,b) => o !== b),
             /**
              * Determines if a number is LOWER than another
              * @param {Number} val - value to test
              * @param {Number} other - num to test with value
              */
-            lt: ta((val, other) => val < other),
+            lt: curry((val, other) => val < other),
             /**
              * Determines if a number is LOWER than or equal to another
              * @param {Number} val - value to test
              * @param {Number} other - num to test with value
              */
-            lte: (val, other) => val <= other,
+            lte: curry((val, other) => val <= other),
             /**
              * Determines if a number is BIGGER than another
              * @param {Number} val - value to test
              * @param {Number} other - num to test with value
              */
-            bt: (val, other) => val > other,
+            bt: curry((val, other) => val > other),
             /**
              * Determines if a number is BIGGER than or equal to another
              * @param {Number} val - value to test
              * @param {Number} other - num to test with value
              */
-            bte: (val, other) => val >= other,
+            bte: curry((val, other) => val >= other),
             /**
              * Determine if a given collection or string is empty
              * @param {Object|Array|string} val - value to test if empty

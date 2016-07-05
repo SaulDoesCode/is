@@ -6,7 +6,9 @@
  */
 (function(root) {
   "use strict";
-  var slice = Array.prototype.slice.call;
+  var slice = function(ctx, i) {
+    return Array.prototype.slice.call(ctx, i || 0);
+  };
 
   function curry(fn, ctx) {
     var arity = fn.length;
@@ -25,12 +27,7 @@
       for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
       }
-      return args.length == 1 ? test(args[0]) : curry(function() {
-        for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-          args[_key2] = arguments[_key2];
-        }
-        return args.length && args.every(test);
-      });
+      return args.length == 1 ? test : args.length && args.every(test);
     };
   } // get the string form of any object
   // then compare it to a given string
@@ -123,9 +120,9 @@
        * @param {Node} element - node to test
        * @param {string} tag - tag to test node for
        */
-      Tag: function(element, tag) {
+      Tag: curry(function(element, tag) {
         return is.Node(element) ? element.tagName === tag.toUpperCase() : false;
-      },
+      }),
       /**
        * Determine whether a variable is a DOM NodeList or Collection of Nodes
        * @param args - value/values to test
@@ -371,9 +368,9 @@
        * @param {Number} min - minimum to compare the value with
        * @returns {Boolean} wether or not the value is between the max and min
        */
-      Between: function(val, max, min) {
+      Between: curry(function(val, max, min) {
         return val <= max && val >= min;
-      },
+      }),
       /**
        * checks if a number is an integer
        * @param val - variable / value to test
@@ -417,7 +414,7 @@
        * @param a - first value to compare
        * @param b - second value to compare
        */
-      eq: ta(function(a, b) {
+      eq: curry(function(a, b) {
         return a === b;
       }),
       /**
@@ -425,7 +422,7 @@
        * @param a - first value to compare
        * @param b - second value to compare
        */
-      not: ta(function(o, b) {
+      not: curry(function(o, b) {
         return o !== b;
       }),
       /**
@@ -433,7 +430,7 @@
        * @param {Number} val - value to test
        * @param {Number} other - num to test with value
        */
-      lt: ta(function(val, other) {
+      lt: curry(function(val, other) {
         return val < other;
       }),
       /**
@@ -441,25 +438,25 @@
        * @param {Number} val - value to test
        * @param {Number} other - num to test with value
        */
-      lte: function(val, other) {
+      lte: curry(function(val, other) {
         return val <= other;
-      },
+      }),
       /**
        * Determines if a number is BIGGER than another
        * @param {Number} val - value to test
        * @param {Number} other - num to test with value
        */
-      bt: function(val, other) {
+      bt: curry(function(val, other) {
         return val > other;
-      },
+      }),
       /**
        * Determines if a number is BIGGER than or equal to another
        * @param {Number} val - value to test
        * @param {Number} other - num to test with value
        */
-      bte: function(val, other) {
+      bte: curry(function(val, other) {
         return val >= other;
-      },
+      }),
       /**
        * Determine if a given collection or string is empty
        * @param {Object|Array|string} val - value to test if empty
